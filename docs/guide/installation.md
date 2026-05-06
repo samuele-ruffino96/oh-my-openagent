@@ -73,7 +73,7 @@ Ask the user these questions to determine CLI options:
    - If **no** → `--zai-coding-plan=no` (default)
 
 7. **Do you have an OpenCode Go subscription?**
-   - OpenCode Go is a $10/month subscription providing access to GLM-5, Kimi K2.5, and MiniMax M2.7 models
+    - OpenCode Go is a $10/month subscription providing access to GLM-5, Kimi K2.6, MiniMax M2.5, DeepSeek V4, Qwen 3.5/3.6, and MIMO V2 models
    - If **yes** → `--opencode-go=yes`
    - If **no** → `--opencode-go=no` (default)
 
@@ -248,7 +248,7 @@ If Z.ai is your main provider, the most important fallbacks are:
 
 #### OpenCode Zen
 
-OpenCode Zen provides access to `opencode/` prefixed models including `opencode/claude-opus-4-7`, `opencode/gpt-5.5`, `opencode/gpt-5.3-codex`, `opencode/gpt-5-nano`, `opencode/glm-5`, `opencode/big-pickle`, `opencode/minimax-m2.7`, and `opencode/minimax-m2.7-highspeed`.
+OpenCode Zen provides access to `opencode/` prefixed models including `opencode/claude-opus-4-7`, `opencode/gpt-5.5`, `opencode/gpt-5.3-codex`, `opencode/gpt-5-nano`, `opencode/glm-5`, `opencode/big-pickle`, and `opencode/minimax-m2.7`.
 
 When OpenCode Zen is the best available provider, these are the most relevant source-backed examples:
 
@@ -313,9 +313,10 @@ Not all models behave the same way. Understanding which models are "similar" hel
 | --------------------- | -------------------------------- | ----------------------------------------------------------- |
 | **Gemini 3.1 Pro**    | google, github-copilot, opencode | Excels at visual/frontend tasks. Different reasoning style. |
 | **Gemini 3 Flash**    | google, github-copilot, opencode | Fast, good for doc search and light tasks.                  |
-| **MiniMax M2.7**      | opencode-go, opencode, vercel       | Fast and smart. Utility fallbacks use `minimax-m2.7` or `minimax-m2.7-highspeed` depending on the chain. |
-| **MiniMax M2.7 Highspeed** | vercel, opencode             | Faster utility variant used in Explore and other retrieval-heavy fallback chains. |
-| **Qwen 3.5 Plus**     | opencode-go                       | 1M context, high-speed reasoning. Default for Explore and Librarian when GPT-5.4 Mini Fast is unavailable. |
+| **MiniMax M2.5**      | opencode-go, vercel               | Fast and smart. Utility fallback for quick tasks and retrieval. |
+| **DeepSeek V4**       | opencode-go                       | High-performance reasoning model. Available as `deepseek-v4-pro` and `deepseek-v4-flash`. |
+| **MIMO V2**           | opencode-go                       | Purpose-built omnimodal model with native vision capabilities and 1M context. |
+| **Qwen 3.5 Plus**     | opencode-go                       | 1M context, high-speed reasoning. Utility fallback for Explore and Librarian. |
 
 **Speed-Focused Models**:
 
@@ -334,7 +335,7 @@ Based on your subscriptions, here's how the agents were configured:
 
 | Agent        | Role             | Default Chain                                   | What It Does                                                                             |
 | ------------ | ---------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| **Sisyphus** | Main ultraworker | anthropic\|github-copilot\|opencode/claude-opus-4-7 (max) → opencode-go/kimi-k2.6 → kimi-for-coding/k2p5 → opencode\|moonshotai\|moonshotai-cn\|firmware\|ollama-cloud\|aihubmix/kimi-k2.5 → openai\|github-copilot\|opencode/gpt-5.5 (medium) → zai-coding-plan\|opencode/glm-5 → opencode/big-pickle | Primary coding agent. Exact runtime chain from `src/shared/model-requirements.ts`. |
+| **Sisyphus** | Main ultraworker | anthropic\|github-copilot\|opencode/claude-opus-4-7 (max) → opencode-go/kimi-k2.6 → opencode-go/mimo-v2.5-pro → kimi-for-coding/k2p5 → openai\|github-copilot\|opencode/gpt-5.5 (medium) → zai-coding-plan\|opencode/glm-5 → opencode/big-pickle | Primary coding agent. Exact runtime chain from `src/shared/model-requirements.ts`. |
 | **Metis**    | Plan review      | anthropic\|github-copilot\|opencode/claude-opus-4-7 (max) → openai\|github-copilot\|opencode/gpt-5.5 (high) → opencode-go/glm-5.1 → kimi-for-coding/k2p5 | Reviews Prometheus plans for gaps. Exact runtime chain from `src/shared/model-requirements.ts`. |
 
 **Dual-Prompt Agents** (auto-switch between Claude and GPT prompts):
@@ -362,9 +363,9 @@ These agents do search, grep, and retrieval. They intentionally use fast, cheap 
 
 | Agent                 | Role               | Default Chain                                                          | Design Rationale                                               |
 | --------------------- | ------------------ | ---------------------------------------------------------------------- | -------------------------------------------------------------- |
-| **Explore**           | Fast codebase grep | openai/gpt-5.4-mini-fast → opencode-go/qwen3.5-plus → vercel/minimax-m2.7-highspeed → opencode-go\|vercel/minimax-m2.7 → anthropic\|opencode\|vercel/claude-haiku-4-5 → openai\|opencode\|vercel/gpt-5.4-nano | Speed is everything. Exact runtime chain from `src/shared/model-requirements.ts`. |
-| **Librarian**         | Docs/code search   | openai/gpt-5.4-mini-fast → opencode-go/qwen3.5-plus → vercel/minimax-m2.7-highspeed → opencode-go\|vercel/minimax-m2.7 → anthropic\|opencode\|vercel/claude-haiku-4-5 → openai\|opencode\|vercel/gpt-5.4-nano | Doc retrieval doesn't need deep reasoning. Exact runtime chain from `src/shared/model-requirements.ts`. |
-| **Multimodal Looker** | Vision/screenshots | openai\|opencode/gpt-5.5 (medium) → opencode-go/kimi-k2.6 → zai-coding-plan/glm-4.6v → openai\|github-copilot\|opencode/gpt-5-nano | GPT-5.5 now leads the default vision path when available. |
+| **Explore**           | Fast codebase grep | openai/gpt-5.4-mini-fast → opencode-go/deepseek-v4-flash → opencode-go\|vercel/minimax-m2.5 → anthropic\|opencode\|vercel/claude-haiku-4-5 → openai\|opencode\|vercel/gpt-5.4-nano | Speed is everything. Exact runtime chain from `src/shared/model-requirements.ts`. |
+| **Librarian**         | Docs/code search   | openai/gpt-5.4-mini-fast → opencode-go/deepseek-v4-flash → opencode-go/qwen3.5-plus → opencode-go\|vercel/minimax-m2.5 → anthropic\|opencode\|vercel/claude-haiku-4-5 → openai\|opencode\|vercel/gpt-5.4-nano | Doc retrieval doesn't need deep reasoning. Exact runtime chain from `src/shared/model-requirements.ts`. |
+| **Multimodal Looker** | Vision/screenshots | openai\|opencode/gpt-5.5 (medium) → opencode-go/mimo-v2.5 → opencode-go/kimi-k2.6 → zai-coding-plan/glm-4.6v → openai\|github-copilot\|opencode/gpt-5-nano | GPT-5.5 now leads the default vision path when available. |
 
 #### Why Different Models Need Different Prompts
 

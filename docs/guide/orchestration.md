@@ -41,14 +41,14 @@ flowchart TB
     end
 
     subgraph Execution["Execution Layer (Orchestrator)"]
-        Orchestrator[" Atlas<br/>(Conductor)<br/>claude-sonnet-4-6 / kimi-k2.5 / gpt-5.5 / minimax-m2.7"]
+        Orchestrator[" Atlas<br/>(Conductor)<br/>claude-sonnet-4-6 / kimi-k2.6 / gpt-5.5 / minimax-m2.5"]
     end
 
     subgraph Workers["Worker Layer (Specialized Agents)"]
-        Junior[" Sisyphus-Junior<br/>(Task Executor)<br/>claude-sonnet-4-6 / kimi-k2.5 / gpt-5.5 / minimax-m2.7"]
+        Junior[" Sisyphus-Junior<br/>(Task Executor)<br/>claude-sonnet-4-6 / kimi-k2.6 / gpt-5.5 / minimax-m2.5"]
         Oracle[" Oracle<br/>(Architecture)<br/>gpt-5.5 / gemini-3.1-pro / claude-opus-4-7 / glm-5"]
-        Explore[" Explore<br/>(Codebase Grep)<br/>gpt-5.4-mini-fast / minimax-m2.7-highspeed / claude-haiku-4-5"]
-        Librarian[" Librarian<br/>(Docs/OSS)<br/>gpt-5.4-mini-fast / minimax-m2.7-highspeed / claude-haiku-4-5"]
+        Explore[" Explore<br/>(Codebase Grep)<br/>gpt-5.4-mini-fast / deepseek-v4-flash / minimax-m2.5 / claude-haiku-4-5"]
+        Librarian[" Librarian<br/>(Docs/OSS)<br/>gpt-5.4-mini-fast / deepseek-v4-flash / minimax-m2.5 / claude-haiku-4-5"]
         Frontend[" visual-engineering<br/>(category + frontend-ui-ux)<br/>gemini-3.1-pro / glm-5 / claude-opus-4-7"]
     end
 
@@ -252,7 +252,7 @@ Junior doesn't need to be the smartest - it needs to be reliable. With:
 3. Clear MUST DO / MUST NOT DO constraints
 4. Verification requirements
 
-Even a mid-tier execution model works when the harness is strict. The current fallback order is `claude-sonnet-4-6` → `kimi-k2.5` → `gpt-5.5` → `minimax-m2.7` → `big-pickle`. The intelligence is in the **system**, not a single worker model.
+Even a mid-tier execution model works when the harness is strict. The current fallback order is `claude-sonnet-4-6` → `kimi-k2.6` → `gpt-5.5` → `minimax-m2.5` → `big-pickle`. The intelligence is in the **system**, not a single worker model.
 
 ### System Reminder Mechanism
 
@@ -298,14 +298,14 @@ task({ category: "quick", prompt: "..." }); // "Just get it done fast"
 
 | Category             | Default config                  | Runtime fallback order                                                                 | When to Use                                                 |
 | -------------------- | ------------------------------- | -------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| `visual-engineering` | `google/gemini-3.1-pro high`   | `gemini-3.1-pro` → `glm-5` → `claude-opus-4-7` → `glm-5` → `k2p5`                     | Frontend, UI/UX, design, styling, animation                 |
-| `ultrabrain`         | `openai/gpt-5.5 xhigh`         | `gpt-5.5` → `gemini-3.1-pro` → `claude-opus-4-7` → `glm-5`                             | Deep logical reasoning, complex architecture decisions      |
-| `deep`               | `openai/gpt-5.5 medium`        | `gpt-5.5` → `claude-opus-4-7` → `gemini-3.1-pro`                                       | Goal-oriented autonomous problem-solving, thorough research |
-| `artistry`           | `google/gemini-3.1-pro high`   | `gemini-3.1-pro` → `claude-opus-4-7` → `gpt-5.5`                                       | Highly creative or artistic tasks, novel ideas              |
-| `quick`              | `openai/gpt-5.4-mini`          | `gpt-5.4-mini` → `claude-haiku-4-5` → `gemini-3-flash` → `minimax-m2.7` → `gpt-5-nano` | Trivial tasks, single file changes, typo fixes              |
-| `unspecified-low`    | `anthropic/claude-sonnet-4-6`  | `claude-sonnet-4-6` → `gpt-5.3-codex` → `kimi-k2.5` → `gemini-3-flash` → `minimax-m2.7` | Tasks that don't fit other categories, low effort           |
-| `unspecified-high`   | `anthropic/claude-opus-4-7 max` | `claude-opus-4-7` → `gpt-5.5` → `glm-5` → `k2p5` → `kimi-k2.5`                          | Tasks that don't fit other categories, high effort          |
-| `writing`            | `kimi-for-coding/k2p5`         | `gemini-3-flash` → `kimi-k2.5` → `claude-sonnet-4-6` → `minimax-m2.7`                  | Documentation, prose, technical writing                     |
+| `visual-engineering` | `google/gemini-3.1-pro high`   | `gemini-3.1-pro` → `glm-5` → `claude-opus-4-7` → `mimo-v2.5` → `kimi-k2.6` → `glm-5.1` → `k2p5` | Frontend, UI/UX, design, styling, animation                 |
+| `ultrabrain`         | `openai/gpt-5.5 xhigh`         | `gpt-5.5` → `gemini-3.1-pro` → `claude-opus-4-7` → `glm-5.1` → `deepseek-v4-pro`       | Deep logical reasoning, complex architecture decisions      |
+| `deep`               | `openai/gpt-5.5 medium`        | `gpt-5.5` → `claude-opus-4-7` → `gemini-3.1-pro` → `deepseek-v4-pro` → `qwen3.6-plus` | Goal-oriented autonomous problem-solving, thorough research |
+| `artistry`           | `google/gemini-3.1-pro high`   | `gemini-3.1-pro` → `claude-opus-4-7` → `gpt-5.5` → `glm-5.1`                          | Highly creative or artistic tasks, novel ideas              |
+| `quick`              | `openai/gpt-5.4-mini`          | `gpt-5.4-mini` → `claude-haiku-4-5` → `gemini-3-flash` → `deepseek-v4-flash` → `qwen3.5-plus` → `minimax-m2.5` → `qwen3.5-plus` | Trivial tasks, single file changes, typo fixes              |
+| `unspecified-low`    | `anthropic/claude-sonnet-4-6`  | `claude-sonnet-4-6` → `gpt-5.3-codex` → `qwen3.5-plus` → `deepseek-v4-flash` → `kimi-k2.6` → `gemini-3-flash` → `minimax-m2.5` | Tasks that don't fit other categories, low effort           |
+| `unspecified-high`   | `anthropic/claude-opus-4-7 max` | `claude-opus-4-7` → `gpt-5.5` → `glm-5` → `k2p5` → `kimi-k2.6` → `glm-5` → `glm-5.1`   | Tasks that don't fit other categories, high effort          |
+| `writing`            | `google/gemini-3-flash`         | `gemini-3-flash` → `kimi-k2.6` → `qwen3.6-plus` → `claude-sonnet-4-6` → `minimax-m2.5` | Documentation, prose, technical writing                     |
 
 ### Skills: Domain-Specific Instructions
 
@@ -423,7 +423,7 @@ Atlas is automatically activated when you run `/start-work`. You don't need to m
 
 | Aspect          | Hephaestus                                 | Sisyphus + `ulw` / `ultrawork`                       |
 | --------------- | ------------------------------------------ | ---------------------------------------------------- |
-| **Model**       | `gpt-5.5` (`medium`)                       | `claude-opus-4-7` / `kimi-k2.5` / `gpt-5.5` / `glm-5` depending on setup |
+| **Model**       | `gpt-5.5` (`medium`)                       | `claude-opus-4-7` / `kimi-k2.6` / `gpt-5.5` / `glm-5` depending on setup |
 | **Approach**    | Autonomous deep worker                     | Keyword-activated ultrawork mode                     |
 | **Best For**    | Complex architectural work, deep reasoning | General complex tasks, "just do it" scenarios        |
 | **Planning**    | Self-plans during execution                | Uses Prometheus plans if available                   |
