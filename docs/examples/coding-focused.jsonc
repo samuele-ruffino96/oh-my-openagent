@@ -21,7 +21,7 @@
 
     // Lightweight planner: quick planning for coding tasks
     "prometheus": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
       "prompt_append": "Keep plans concise. Focus on file structure and key decisions.",
     },
 
@@ -38,7 +38,7 @@
     "multimodal-looker": { "model": "google/gemini-3.1-pro" },
 
     // Plan review: minimal overhead
-    "metis": { "model": "opencode/gpt-5-nano" },
+    "metis": { "model": "opencode-go/qwen3.5-plus" },
 
     // Code review focus
     "momus": { "prompt_append": "Focus on code quality, edge cases, and test coverage." },
@@ -47,12 +47,12 @@
     "atlas": {},
 
     // Quick fixes and small tasks
-    "sisyphus-junior": { "model": "opencode/gpt-5-nano" },
+    "sisyphus-junior": { "model": "opencode-go/qwen3.5-plus" },
   },
 
   "categories": {
     // Trivial changes: fastest possible
-    "quick": { "model": "opencode/gpt-5-nano" },
+    "quick": { "model": "opencode-go/qwen3.5-plus" },
 
     // Standard coding tasks: good quality, fast
     "unspecified-low": { "model": "anthropic/claude-sonnet-4-6" },
