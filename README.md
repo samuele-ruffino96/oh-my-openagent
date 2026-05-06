@@ -191,7 +191,7 @@ When Sisyphus delegates to a subagent, it doesn't pick a model. It picks a **cat
 | `quick`              | Single-file changes, typos         |
 | `ultrabrain`         | Hard logic, architecture decisions |
 
-The agent says what kind of work it needs; the harness picks the right model. `ultrabrain` now routes to GPT-5.4 xhigh by default. You touch nothing.
+The agent says what kind of work it needs; the harness picks the right model. `ultrabrain` now routes to GPT-5.5 xhigh by default. You touch nothing.
 
 ### Claude Code Compatibility
 
