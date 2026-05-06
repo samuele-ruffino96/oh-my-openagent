@@ -22,7 +22,7 @@ export type { GeneratedOmoConfig } from "./model-fallback-types"
 
 const ZAI_MODEL = "zai-coding-plan/glm-4.7"
 
-const ULTIMATE_FALLBACK = "opencode/gpt-5-nano"
+const ULTIMATE_FALLBACK = "opencode-go/qwen3.5-plus"
 const SCHEMA_URL = "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json"
 
 function toFallbackModelObject(entry: FallbackEntry, provider: string): FallbackModelObject {
@@ -65,9 +65,13 @@ function attachFallbackModels<T extends AgentConfig | CategoryConfig>(
     return config
   }
 
-  const fallbackModels = uniqueFallbacks.slice(primaryIndex + 1)
+  let fallbackModels = uniqueFallbacks.slice(primaryIndex + 1)
   if (fallbackModels.length === 0) {
     return config
+  }
+
+  if (config.model.startsWith("opencode-go/") && fallbackModels.length > 1) {
+    fallbackModels = fallbackModels.slice(0, 1)
   }
 
   return {
@@ -82,9 +86,13 @@ function attachAllFallbackModels<T extends AgentConfig | CategoryConfig>(
   availability: ReturnType<typeof toProviderAvailability>,
 ): T {
   const uniqueFallbacks = collectAvailableFallbacks(fallbackChain, availability)
-  const fallbackModels = uniqueFallbacks.filter((entry) => entry.model !== config.model)
+  let fallbackModels = uniqueFallbacks.filter((entry) => entry.model !== config.model)
   if (fallbackModels.length === 0) {
     return config
+  }
+
+  if (config.model.startsWith("opencode-go/") && fallbackModels.length > 1) {
+    fallbackModels = fallbackModels.slice(0, 1)
   }
 
   return {
@@ -130,7 +138,7 @@ export function generateModelConfig(config: InstallConfig): GeneratedOmoConfig {
       if (avail.native.openai) {
         agentConfig = { model: "openai/gpt-5.4-mini-fast" }
       } else if (avail.opencodeGo) {
-        agentConfig = { model: "opencode-go/qwen3.5-plus" }
+        agentConfig = { model: "opencode-go/deepseek-v4-flash" }
       } else if (avail.zai) {
         agentConfig = { model: ZAI_MODEL }
       } else if (avail.vercelAiGateway) {
@@ -151,13 +159,13 @@ export function generateModelConfig(config: InstallConfig): GeneratedOmoConfig {
       } else if (avail.opencodeZen) {
         agentConfig = { model: "opencode/claude-haiku-4-5" }
       } else if (avail.opencodeGo) {
-        agentConfig = { model: "opencode-go/qwen3.5-plus" }
+        agentConfig = { model: "opencode-go/deepseek-v4-flash" }
       } else if (avail.copilot) {
         agentConfig = { model: "github-copilot/gpt-5-mini" }
       } else if (avail.vercelAiGateway) {
-        agentConfig = { model: "vercel/minimax/minimax-m2.7-highspeed" }
+        agentConfig = { model: "vercel/minimax/minimax-m2.5" }
       } else {
-        agentConfig = { model: "opencode/gpt-5-nano" }
+        agentConfig = { model: "opencode-go/qwen3.5-plus" }
       }
       agents[role] = attachAllFallbackModels(agentConfig, req.fallbackChain, avail)
       continue

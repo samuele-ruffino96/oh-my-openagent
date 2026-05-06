@@ -5,60 +5,60 @@ exports[`generateModelConfig no providers available returns ULTIMATE_FALLBACK fo
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "atlas": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "explore": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "hephaestus": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "librarian": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "metis": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "momus": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "multimodal-looker": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "oracle": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "prometheus": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "sisyphus-junior": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
   },
   "categories": {
     "artistry": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "deep": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "quick": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "ultrabrain": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "unspecified-high": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "unspecified-low": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "visual-engineering": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "writing": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
   },
 }
@@ -83,7 +83,7 @@ exports[`generateModelConfig single native provider uses Claude models when only
       "variant": "max",
     },
     "multimodal-looker": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "oracle": {
       "model": "anthropic/claude-opus-4-7",
@@ -153,7 +153,7 @@ exports[`generateModelConfig single native provider uses Claude models with isMa
       "variant": "max",
     },
     "multimodal-looker": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "oracle": {
       "model": "anthropic/claude-opus-4-7",
@@ -386,20 +386,20 @@ exports[`generateModelConfig single native provider uses Gemini models when only
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "atlas": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "explore": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "metis": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "momus": {
       "model": "google/gemini-3.1-pro-preview",
       "variant": "high",
     },
     "multimodal-looker": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "oracle": {
       "model": "google/gemini-3.1-pro-preview",
@@ -409,7 +409,7 @@ exports[`generateModelConfig single native provider uses Gemini models when only
       "model": "google/gemini-3.1-pro-preview",
     },
     "sisyphus-junior": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
   },
   "categories": {
@@ -450,20 +450,20 @@ exports[`generateModelConfig single native provider uses Gemini models with isMa
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "atlas": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "explore": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "metis": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "momus": {
       "model": "google/gemini-3.1-pro-preview",
       "variant": "high",
     },
     "multimodal-looker": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "oracle": {
       "model": "google/gemini-3.1-pro-preview",
@@ -473,7 +473,7 @@ exports[`generateModelConfig single native provider uses Gemini models with isMa
       "model": "google/gemini-3.1-pro-preview",
     },
     "sisyphus-junior": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
   },
   "categories": {
@@ -493,7 +493,7 @@ exports[`generateModelConfig single native provider uses Gemini models with isMa
       "variant": "high",
     },
     "unspecified-high": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "unspecified-low": {
       "model": "google/gemini-3-flash-preview",
@@ -1096,9 +1096,6 @@ exports[`generateModelConfig fallback providers uses OpenCode Zen models when on
         {
           "model": "opencode/gemini-3-flash",
         },
-        {
-          "model": "opencode/gpt-5-nano",
-        },
       ],
       "model": "opencode/gpt-5.4-mini",
     },
@@ -1318,9 +1315,6 @@ exports[`generateModelConfig fallback providers uses OpenCode Zen models with is
         {
           "model": "opencode/gemini-3-flash",
         },
-        {
-          "model": "opencode/gpt-5-nano",
-        },
       ],
       "model": "opencode/gpt-5.4-mini",
     },
@@ -1346,9 +1340,6 @@ exports[`generateModelConfig fallback providers uses OpenCode Zen models with is
         },
         {
           "model": "opencode/glm-5",
-        },
-        {
-          "model": "opencode/kimi-k2.5",
         },
       ],
       "model": "opencode/claude-opus-4-7",
@@ -1760,60 +1751,60 @@ exports[`generateModelConfig fallback providers uses ZAI model for librarian whe
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "atlas": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "explore": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "librarian": {
       "model": "zai-coding-plan/glm-4.7",
     },
     "metis": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "momus": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "multimodal-looker": {
       "model": "zai-coding-plan/glm-4.6v",
     },
     "oracle": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "prometheus": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "sisyphus": {
       "model": "zai-coding-plan/glm-5",
     },
     "sisyphus-junior": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
   },
   "categories": {
     "artistry": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "deep": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "quick": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "ultrabrain": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "unspecified-high": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "unspecified-low": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "visual-engineering": {
       "model": "zai-coding-plan/glm-5",
     },
     "writing": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
   },
 }
@@ -1824,60 +1815,60 @@ exports[`generateModelConfig fallback providers uses ZAI model for librarian wit
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "atlas": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "explore": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "librarian": {
       "model": "zai-coding-plan/glm-4.7",
     },
     "metis": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "momus": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "multimodal-looker": {
       "model": "zai-coding-plan/glm-4.6v",
     },
     "oracle": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "prometheus": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "sisyphus": {
       "model": "zai-coding-plan/glm-5",
     },
     "sisyphus-junior": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
   },
   "categories": {
     "artistry": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "deep": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "quick": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "ultrabrain": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "unspecified-high": {
       "model": "zai-coding-plan/glm-5",
     },
     "unspecified-low": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "visual-engineering": {
       "model": "zai-coding-plan/glm-5",
     },
     "writing": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
   },
 }
@@ -2075,9 +2066,6 @@ exports[`generateModelConfig mixed provider scenarios uses Claude + OpenCode Zen
         },
         {
           "model": "opencode/gemini-3-flash",
-        },
-        {
-          "model": "opencode/gpt-5-nano",
         },
       ],
       "model": "opencode/gpt-5.4-mini",
@@ -2534,7 +2522,7 @@ exports[`generateModelConfig mixed provider scenarios uses Gemini + Claude combi
       "variant": "max",
     },
     "multimodal-looker": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode-go/qwen3.5-plus",
     },
     "oracle": {
       "fallback_models": [
@@ -2915,9 +2903,6 @@ exports[`generateModelConfig mixed provider scenarios uses all fallback provider
         },
         {
           "model": "opencode/gemini-3-flash",
-        },
-        {
-          "model": "opencode/gpt-5-nano",
         },
       ],
       "model": "github-copilot/gpt-5.4-mini",
@@ -3420,9 +3405,6 @@ exports[`generateModelConfig mixed provider scenarios uses all providers togethe
         },
         {
           "model": "opencode/gemini-3-flash",
-        },
-        {
-          "model": "opencode/gpt-5-nano",
         },
       ],
       "model": "openai/gpt-5.4-mini",
@@ -3972,9 +3954,6 @@ exports[`generateModelConfig mixed provider scenarios uses all providers with is
         {
           "model": "opencode/gemini-3-flash",
         },
-        {
-          "model": "opencode/gpt-5-nano",
-        },
       ],
       "model": "openai/gpt-5.4-mini",
     },
@@ -4039,9 +4018,6 @@ exports[`generateModelConfig mixed provider scenarios uses all providers with is
         },
         {
           "model": "opencode/glm-5",
-        },
-        {
-          "model": "opencode/kimi-k2.5",
         },
       ],
       "model": "anthropic/claude-opus-4-7",
@@ -4141,11 +4117,14 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "model": "vercel/moonshotai/kimi-k2.6",
         },
         {
+          "model": "vercel/qwen3.6-plus",
+        },
+        {
           "model": "vercel/openai/gpt-5.5",
           "variant": "medium",
         },
         {
-          "model": "vercel/minimax/minimax-m2.7",
+          "model": "vercel/minimax/minimax-m2.5",
         },
       ],
       "model": "vercel/anthropic/claude-sonnet-4.6",
@@ -4153,16 +4132,13 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
     "explore": {
       "fallback_models": [
         {
-          "model": "vercel/minimax/minimax-m2.7",
-        },
-        {
           "model": "vercel/anthropic/claude-haiku-4.5",
         },
         {
           "model": "vercel/openai/gpt-5.4-nano",
         },
       ],
-      "model": "vercel/minimax/minimax-m2.7-highspeed",
+      "model": "vercel/minimax/minimax-m2.5",
     },
     "hephaestus": {
       "model": "vercel/openai/gpt-5.5",
@@ -4171,7 +4147,7 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
     "librarian": {
       "fallback_models": [
         {
-          "model": "vercel/minimax/minimax-m2.7-highspeed",
+          "model": "vercel/minimax/minimax-m2.5",
         },
         {
           "model": "vercel/anthropic/claude-haiku-4.5",
@@ -4187,6 +4163,12 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
         {
           "model": "vercel/openai/gpt-5.5",
           "variant": "high",
+        },
+        {
+          "model": "vercel/moonshotai/kimi-k2.6",
+        },
+        {
+          "model": "vercel/zai/glm-5",
         },
         {
           "model": "vercel/zai/glm-5.1",
@@ -4206,6 +4188,9 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "variant": "high",
         },
         {
+          "model": "vercel/deepseek-v4-pro",
+        },
+        {
           "model": "vercel/zai/glm-5.1",
         },
       ],
@@ -4214,6 +4199,9 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
     },
     "multimodal-looker": {
       "fallback_models": [
+        {
+          "model": "vercel/mimo-v2.5",
+        },
         {
           "model": "vercel/moonshotai/kimi-k2.6",
         },
@@ -4240,6 +4228,9 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
         {
           "model": "vercel/zai/glm-5.1",
         },
+        {
+          "model": "vercel/deepseek-v4-pro",
+        },
       ],
       "model": "vercel/openai/gpt-5.5",
       "variant": "high",
@@ -4254,6 +4245,9 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "model": "vercel/zai/glm-5.1",
         },
         {
+          "model": "vercel/moonshotai/kimi-k2.6",
+        },
+        {
           "model": "vercel/google/gemini-3.1-pro-preview",
         },
       ],
@@ -4264,6 +4258,9 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
       "fallback_models": [
         {
           "model": "vercel/moonshotai/kimi-k2.6",
+        },
+        {
+          "model": "vercel/mimo-v2.5-pro",
         },
         {
           "model": "vercel/moonshotai/kimi-k2.5",
@@ -4305,6 +4302,9 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
         {
           "model": "vercel/openai/gpt-5.5",
         },
+        {
+          "model": "vercel/zai/glm-5.1",
+        },
       ],
       "model": "vercel/google/gemini-3.1-pro-preview",
       "variant": "high",
@@ -4319,6 +4319,12 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "model": "vercel/google/gemini-3.1-pro-preview",
           "variant": "high",
         },
+        {
+          "model": "vercel/deepseek-v4-pro",
+        },
+        {
+          "model": "vercel/qwen3.6-plus",
+        },
       ],
       "model": "vercel/openai/gpt-5.5",
       "variant": "medium",
@@ -4332,10 +4338,10 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "model": "vercel/google/gemini-3-flash",
         },
         {
-          "model": "vercel/minimax/minimax-m2.7",
+          "model": "vercel/deepseek-v4-flash",
         },
         {
-          "model": "vercel/openai/gpt-5-nano",
+          "model": "vercel/minimax/minimax-m2.5",
         },
       ],
       "model": "vercel/openai/gpt-5.4-mini",
@@ -4352,6 +4358,9 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
         },
         {
           "model": "vercel/zai/glm-5.1",
+        },
+        {
+          "model": "vercel/deepseek-v4-pro",
         },
       ],
       "model": "vercel/openai/gpt-5.5",
@@ -4370,7 +4379,7 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "model": "vercel/google/gemini-3-flash",
         },
         {
-          "model": "vercel/minimax/minimax-m2.7",
+          "model": "vercel/minimax/minimax-m2.5",
         },
       ],
       "model": "vercel/anthropic/claude-sonnet-4.6",
@@ -4388,7 +4397,7 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "model": "vercel/google/gemini-3-flash",
         },
         {
-          "model": "vercel/minimax/minimax-m2.7",
+          "model": "vercel/minimax/minimax-m2.5",
         },
       ],
       "model": "vercel/anthropic/claude-sonnet-4.6",
@@ -4403,6 +4412,12 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "variant": "max",
         },
         {
+          "model": "vercel/mimo-v2.5",
+        },
+        {
+          "model": "vercel/moonshotai/kimi-k2.6",
+        },
+        {
           "model": "vercel/zai/glm-5.1",
         },
       ],
@@ -4415,10 +4430,13 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "model": "vercel/moonshotai/kimi-k2.6",
         },
         {
+          "model": "vercel/qwen3.6-plus",
+        },
+        {
           "model": "vercel/anthropic/claude-sonnet-4.6",
         },
         {
-          "model": "vercel/minimax/minimax-m2.7",
+          "model": "vercel/minimax/minimax-m2.5",
         },
       ],
       "model": "vercel/google/gemini-3-flash",
@@ -4437,11 +4455,14 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "model": "vercel/moonshotai/kimi-k2.6",
         },
         {
+          "model": "vercel/qwen3.6-plus",
+        },
+        {
           "model": "vercel/openai/gpt-5.5",
           "variant": "medium",
         },
         {
-          "model": "vercel/minimax/minimax-m2.7",
+          "model": "vercel/minimax/minimax-m2.5",
         },
       ],
       "model": "vercel/anthropic/claude-sonnet-4.6",
@@ -4449,16 +4470,13 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
     "explore": {
       "fallback_models": [
         {
-          "model": "vercel/minimax/minimax-m2.7",
-        },
-        {
           "model": "vercel/anthropic/claude-haiku-4.5",
         },
         {
           "model": "vercel/openai/gpt-5.4-nano",
         },
       ],
-      "model": "vercel/minimax/minimax-m2.7-highspeed",
+      "model": "vercel/minimax/minimax-m2.5",
     },
     "hephaestus": {
       "model": "vercel/openai/gpt-5.5",
@@ -4467,7 +4485,7 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
     "librarian": {
       "fallback_models": [
         {
-          "model": "vercel/minimax/minimax-m2.7-highspeed",
+          "model": "vercel/minimax/minimax-m2.5",
         },
         {
           "model": "vercel/anthropic/claude-haiku-4.5",
@@ -4483,6 +4501,12 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
         {
           "model": "vercel/openai/gpt-5.5",
           "variant": "high",
+        },
+        {
+          "model": "vercel/moonshotai/kimi-k2.6",
+        },
+        {
+          "model": "vercel/zai/glm-5",
         },
         {
           "model": "vercel/zai/glm-5.1",
@@ -4502,6 +4526,9 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "variant": "high",
         },
         {
+          "model": "vercel/deepseek-v4-pro",
+        },
+        {
           "model": "vercel/zai/glm-5.1",
         },
       ],
@@ -4510,6 +4537,9 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
     },
     "multimodal-looker": {
       "fallback_models": [
+        {
+          "model": "vercel/mimo-v2.5",
+        },
         {
           "model": "vercel/moonshotai/kimi-k2.6",
         },
@@ -4536,6 +4566,9 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
         {
           "model": "vercel/zai/glm-5.1",
         },
+        {
+          "model": "vercel/deepseek-v4-pro",
+        },
       ],
       "model": "vercel/openai/gpt-5.5",
       "variant": "high",
@@ -4550,6 +4583,9 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "model": "vercel/zai/glm-5.1",
         },
         {
+          "model": "vercel/moonshotai/kimi-k2.6",
+        },
+        {
           "model": "vercel/google/gemini-3.1-pro-preview",
         },
       ],
@@ -4560,6 +4596,9 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
       "fallback_models": [
         {
           "model": "vercel/moonshotai/kimi-k2.6",
+        },
+        {
+          "model": "vercel/mimo-v2.5-pro",
         },
         {
           "model": "vercel/moonshotai/kimi-k2.5",
@@ -4601,6 +4640,9 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
         {
           "model": "vercel/openai/gpt-5.5",
         },
+        {
+          "model": "vercel/zai/glm-5.1",
+        },
       ],
       "model": "vercel/google/gemini-3.1-pro-preview",
       "variant": "high",
@@ -4615,6 +4657,12 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "model": "vercel/google/gemini-3.1-pro-preview",
           "variant": "high",
         },
+        {
+          "model": "vercel/deepseek-v4-pro",
+        },
+        {
+          "model": "vercel/qwen3.6-plus",
+        },
       ],
       "model": "vercel/openai/gpt-5.5",
       "variant": "medium",
@@ -4628,10 +4676,10 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "model": "vercel/google/gemini-3-flash",
         },
         {
-          "model": "vercel/minimax/minimax-m2.7",
+          "model": "vercel/deepseek-v4-flash",
         },
         {
-          "model": "vercel/openai/gpt-5-nano",
+          "model": "vercel/minimax/minimax-m2.5",
         },
       ],
       "model": "vercel/openai/gpt-5.4-mini",
@@ -4649,6 +4697,9 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
         {
           "model": "vercel/zai/glm-5.1",
         },
+        {
+          "model": "vercel/deepseek-v4-pro",
+        },
       ],
       "model": "vercel/openai/gpt-5.5",
       "variant": "xhigh",
@@ -4663,10 +4714,10 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "model": "vercel/zai/glm-5",
         },
         {
-          "model": "vercel/zai/glm-5.1",
+          "model": "vercel/moonshotai/kimi-k2.6",
         },
         {
-          "model": "vercel/moonshotai/kimi-k2.5",
+          "model": "vercel/zai/glm-5.1",
         },
       ],
       "model": "vercel/anthropic/claude-opus-4.7",
@@ -4685,7 +4736,7 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "model": "vercel/google/gemini-3-flash",
         },
         {
-          "model": "vercel/minimax/minimax-m2.7",
+          "model": "vercel/minimax/minimax-m2.5",
         },
       ],
       "model": "vercel/anthropic/claude-sonnet-4.6",
@@ -4700,6 +4751,12 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "variant": "max",
         },
         {
+          "model": "vercel/mimo-v2.5",
+        },
+        {
+          "model": "vercel/moonshotai/kimi-k2.6",
+        },
+        {
           "model": "vercel/zai/glm-5.1",
         },
       ],
@@ -4712,10 +4769,13 @@ exports[`generateModelConfig Vercel AI Gateway provider uses vercel/ model strin
           "model": "vercel/moonshotai/kimi-k2.6",
         },
         {
+          "model": "vercel/qwen3.6-plus",
+        },
+        {
           "model": "vercel/anthropic/claude-sonnet-4.6",
         },
         {
-          "model": "vercel/minimax/minimax-m2.7",
+          "model": "vercel/minimax/minimax-m2.5",
         },
       ],
       "model": "vercel/google/gemini-3-flash",

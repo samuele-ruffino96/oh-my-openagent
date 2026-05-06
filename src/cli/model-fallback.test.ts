@@ -315,15 +315,15 @@ describe("generateModelConfig", () => {
   })
 
   describe("explore agent special cases", () => {
-    test("explore uses gpt-5-nano when only Gemini available (no Claude)", () => {
+    test("explore uses qwen3.5-plus when only Gemini available (no Claude)", () => {
       // #given only Gemini is available (no Claude)
       const config = createConfig({ hasGemini: true })
 
       // #when generateModelConfig is called
       const result = generateModelConfig(config)
 
-      // #then explore should use gpt-5-nano (Claude haiku not available)
-      expect(result.agents?.explore?.model).toBe("opencode/gpt-5-nano")
+      // #then explore should use qwen3.5-plus (Claude haiku not available)
+      expect(result.agents?.explore?.model).toBe("opencode-go/qwen3.5-plus")
     })
 
     test("explore uses Claude haiku when Claude available", () => {
@@ -627,7 +627,7 @@ describe("generateModelConfig", () => {
       expect(result).toMatchSnapshot()
     })
 
-    test("explore uses vercel/minimax/minimax-m2.7-highspeed when only gateway available", () => {
+    test("explore uses vercel/minimax/minimax-m2.5 when only gateway available", () => {
       // #given only Vercel AI Gateway is available
       const config = createConfig({ hasVercelAiGateway: true })
 
@@ -635,7 +635,7 @@ describe("generateModelConfig", () => {
       const result = generateModelConfig(config)
 
       // #then explore should use gateway-routed minimax (preferred over claude-haiku)
-      expect(result.agents?.explore?.model).toBe("vercel/minimax/minimax-m2.7-highspeed")
+      expect(result.agents?.explore?.model).toBe("vercel/minimax/minimax-m2.5")
     })
 
     test("librarian uses vercel/minimax/minimax-m2.7 when only gateway available", () => {
